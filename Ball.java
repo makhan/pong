@@ -1,10 +1,12 @@
 package pong;
 
 import java.awt.geom.Ellipse2D;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
-public class Ball extends AbstractBasicObject {
+public class Ball extends AbstractBasicObject implements RenderableObject {
   private double radius;
   
   public Ball(double radius, Point2d position) {
@@ -20,6 +22,11 @@ public class Ball extends AbstractBasicObject {
   // TODO(MAK): Have a Builder or Factory for this.
   public Ball() {
     this(10.0, new Point2d(0,0));
+  }
+
+  public void draw(Graphics g) {
+    Graphics2D g2 = (Graphics2D)g;
+    g2.draw(getCollisionShape());
   }
 
 }

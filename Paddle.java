@@ -1,5 +1,8 @@
 package pong;
 
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
@@ -21,6 +24,11 @@ public class Paddle extends AbstractBasicObject {
 
   public Paddle() {
     this(20, 5, new Point2d(100, 100));
+  }
+
+  public void draw(Graphics g) {
+    Graphics2D g2 = (Graphics2D)g;
+    g2.draw(getCollisionShape());
   }
 
 }
