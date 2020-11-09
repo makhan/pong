@@ -8,8 +8,15 @@ import java.util.concurrent.Callable;
 public class Renderer {
 
   private List<RenderableObject> objects;
+  private int width, height;
 
   public Renderer() {
+    this(640, 480);
+  }
+
+  public Renderer(int width, int height) {
+    this.width = width;
+    this.height = height;
     objects = new ArrayList<RenderableObject>();
   }
 
