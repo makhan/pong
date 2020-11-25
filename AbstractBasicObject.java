@@ -57,6 +57,7 @@ public abstract class AbstractBasicObject implements PhysicsObject {
   @Override
   public void updatePosition() {
     this.position.add(this.velocity);
+    System.out.println(this.position);
   }
 
   @Override

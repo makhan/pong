@@ -28,6 +28,8 @@ public class Renderer {
     // TODO(MAK): Draw background.
     // TODO(MAK): Look into double buffering.
     // Draw each object.
-    objects.forEach(object -> object.draw(g));
+    for (RenderableObject object : objects) {
+      object.draw(g);
+    }
   }
 }

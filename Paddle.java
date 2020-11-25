@@ -7,7 +7,7 @@ import java.awt.geom.Rectangle2D;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
-public class Paddle extends AbstractBasicObject {
+public class Paddle extends AbstractBasicObject implements RenderableObject {
   private double length;
   private double height;
 
@@ -15,7 +15,7 @@ public class Paddle extends AbstractBasicObject {
     this.length = length;
     this.height = height;
     setPosition(position);
-    setVelocity(new Vector2d());
+    setVelocity(new Vector2d(0,0));
     double p[] = new double[2];
     position.get(p);
     Point2d upperLeft = new Point2d(p[0], p[1]);

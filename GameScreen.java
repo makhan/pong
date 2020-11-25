@@ -3,6 +3,8 @@ package pong;
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Toolkit;
+
 
 public class GameScreen extends JPanel {
 
@@ -16,5 +18,6 @@ public class GameScreen extends JPanel {
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
     renderer.draw(g);
+    Toolkit.getDefaultToolkit().sync();
   }
 }
