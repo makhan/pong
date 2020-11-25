@@ -72,13 +72,5 @@ public class Game {
       o.updatePosition();
     }
   }
-
-  class GameThread implements Runnable {
-    public void run() {
-      while(true) {
-        updatePhysics();
-      }
-    }
-  }
 }
 
