@@ -8,7 +8,7 @@ import java.util.concurrent.Callable;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
-class InvisibleBarrier extends AbstractBasicObject {
+class InvisibleBarrier extends BasicObject {
   
   public InvisibleBarrier(Point2d position, int width, int height) {
     super();

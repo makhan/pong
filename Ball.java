@@ -7,7 +7,7 @@ import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
 
-public class Ball extends AbstractBasicObject implements RenderableObject {
+public class Ball extends BasicObject implements RenderableObject {
   private double radius;
   
   public Ball(double radius, Point2d position) {

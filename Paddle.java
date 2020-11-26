@@ -8,7 +8,7 @@ import java.awt.geom.Rectangle2D;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
-public class Paddle extends AbstractBasicObject implements RenderableObject {
+public class Paddle extends BasicObject implements RenderableObject {
   private double length;
   private double height;
   private MousePosition mouse;

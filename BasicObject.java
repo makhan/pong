@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
-public class AbstractBasicObject implements PhysicsObject {
+public class BasicObject implements PhysicsObject {
   protected Point2d position;
   protected Vector2d velocity;
   protected RectangularShape collisionShape;
   protected List<CollsionHandler> collisionHandlers;
 
-  AbstractBasicObject() {
+  BasicObject() {
     collisionHandlers = new ArrayList<CollsionHandler>();
   }
 
