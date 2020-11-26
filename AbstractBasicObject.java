@@ -4,18 +4,17 @@ import java.awt.Graphics2D;
 import java.awt.geom.RectangularShape;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.concurrent.Callable;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
-public abstract class AbstractBasicObject implements PhysicsObject {
+public class AbstractBasicObject implements PhysicsObject {
   protected Point2d position;
   protected Vector2d velocity;
   protected RectangularShape collisionShape;
-  protected List<Callable> collisionHandlers;
+  protected List<CollsionHandler> collisionHandlers;
 
   AbstractBasicObject() {
-    collisionHandlers = new ArrayList<Callable>();
+    collisionHandlers = new ArrayList<CollsionHandler>();
   }
 
 
@@ -61,15 +60,15 @@ public abstract class AbstractBasicObject implements PhysicsObject {
   }
 
   @Override
-  public void addCollisionHandler(Callable c) {
+  public void addCollisionHandler(CollsionHandler c) {
     collisionHandlers.add(c); 
   }
 
   @Override
-  public void handleCollisions() {
+  public void handleCollisions(PhysicsObject other) {
     try {
-      for (Callable handler : collisionHandlers) {
-        handler.call();
+      for (CollsionHandler handler : collisionHandlers) {
+        handler.handle(other);
       }
     } catch (Exception e) {
       throw new RuntimeException(e);

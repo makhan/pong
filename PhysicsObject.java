@@ -1,7 +1,6 @@
 package pong;
 
 import java.awt.geom.RectangularShape;
-import java.util.concurrent.Callable;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
@@ -14,6 +13,6 @@ public interface PhysicsObject {
   public RectangularShape getCollisionShape();
   public void setCollisionShape(RectangularShape shape);
   public void updatePosition();
-  public void addCollisionHandler(Callable c);
-  public void handleCollisions();
+  public void addCollisionHandler(CollsionHandler c);
+  public void handleCollisions(PhysicsObject other);
 }

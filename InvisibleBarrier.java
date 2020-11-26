@@ -21,6 +21,4 @@ class InvisibleBarrier extends AbstractBasicObject {
   public void updatePosition() {
     // Do nothing.
   }
-
-
 }

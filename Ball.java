@@ -6,6 +6,7 @@ import java.awt.Graphics2D;
 import javax.vecmath.Point2d;
 import javax.vecmath.Vector2d;
 
+
 public class Ball extends AbstractBasicObject implements RenderableObject {
   private double radius;
   
